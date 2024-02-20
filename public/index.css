@@ -1,0 +1,14 @@
+#bulma-logo
+{
+	max-width: 12rem;
+}
+
+.has-gray-gradient
+{
+    background: linear-gradient(225deg, rgba(100,100,100,1) 0%, rgba(160,160,160,1) 42%, rgba(190,190,190,1) 78%, rgba(200,200,200,1) 100%);
+}
+
+#request-results
+{
+    font-size: 0.85rem;
+}

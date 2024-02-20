@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FactGathererAPI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <section class="hero is-primary is-fullheight has-gray-gradient">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <p class="title">
+                    Welcome to FactGathererAPI!
+                </p>
+                <p class="subtitle">
+                    Serving fun knowledge, one fact at a time.
+                </p>
+                <div class="columns is-mobile">
+                    <div class="column is-three-fifths-desktop is-offset-one-fifth-desktop">
+                        <div class="box">
+                            <p><strong>Usage:</strong></p>
+                            <p><strong>Fact/Fakect:</strong> Fact for real facts, fakect for fake facts.</p>
+
+                            <p><strong>Available routes:</strong></p>
+                            <ul class="mb-3">
+                                <li><strong>/?id=id1,id2...:</strong> gives facts/fake facts with specified IDs, all of them if no id is specified.</li>
+                                <li><strong>/random?count=number:</strong> gives specified amounts of (1 if not specified) random fact/fake facts.</li>
+                                <li><strong>/all:</strong> gives all facts/fake facts in the database.</li>
+                                <li><strong>/count:</strong> gives the count of fact/fake facts.</li>
+                            </ul>
+                            <div class="field has-addons">
+                                <div class="control">
+                                    <div class="select">
+                                        <select name="Fact Type" id="fact-type">
+                                            <option value="fact">fact/</option>
+                                            <option value="fakect">fakect/</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control is-expanded">
+                                    <input class="input" type="text" placeholder="Query goes here..." id="query-input">
+                                </div>
+                                <p class="control">
+                                    <a class="button has-text-white has-background-grey" onclick="onSendButtonClick()">
+                                        Send!
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="field has-addons">
+                                <div class="control is-expanded">
+                                    <textarea class="textarea" name="Results" id="request-results" cols="30" rows="7" readonly placeholder="Results go here..."></textarea>
+                                </div>
+                            </div>
+                            <p>Currently serving <strong id="fact-count">undefined</strong> facts and <strong id="fakect-count">undefined</strong> fake facts!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-foot has-background-grey">
+            <div class="container has-text-centered">
+                <div class="content">
+                    <figure class="image">
+                        <a href="https://bulma.io/made-with-bulma/">
+                            <img id="bulma-logo" class="mt-3" src="./img/made-with-bulma--dark.png" alt="Made with Bulma">
+                        </a>
+                        <p class="mb-3">No rights reserved.</p>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
